@@ -1,13 +1,6 @@
-import express from 'express';
-// import router from './routes/router';
-import * as WebSocket from 'ws';
-import http from 'http';
+import { WebSocketServer } from 'ws';
 
-const app = express();
-
-const server = http.createServer(app);
-
-const wss = new WebSocket.Server({server})
+const wss = new WebSocketServer({port:8080})
 
 wss.on('connection', (ws) => {
 
@@ -24,8 +17,3 @@ wss.on('connection', (ws) => {
     ws.send('Hi there, I am a WebSocket server');
 });
 
-
-
-server.listen((3000), () => {
-    console.log("Server listening on PORT: 3000")
-})

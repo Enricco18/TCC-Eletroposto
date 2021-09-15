@@ -5,15 +5,16 @@
   "repository": "https://github.com/Enricco18/TCC-Eletroposto.git",
   "author": "Enricco Amaral <enriccoamaral@hotmail.com>",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "node -r sucrase/register src/index.js",
+    "devStart": "nodemon src/index.js"
   },
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "ws": "^8.2.1"
+    "ws": "^8.2.1",
+    "sucrase": "^3.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "sucrase": "^3.18.1"
+    "nodemon": "^2.0.7"
   }
 }

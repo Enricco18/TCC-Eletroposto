@@ -17,3 +17,4 @@ wss.on('connection', (ws) => {
     ws.send('Hi there, I am a WebSocket server');
 });
 
+console.log("Started at: 8080")

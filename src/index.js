@@ -1,6 +1,6 @@
 import { WebSocketServer } from 'ws';
 
-const wss = new WebSocketServer({port:8080})
+const wss = new WebSocketServer({port:$PORT})
 
 wss.on('connection', (ws) => {
 
@@ -17,4 +17,4 @@ wss.on('connection', (ws) => {
     ws.send('Hi there, I am a WebSocket server');
 });
 
-console.log("Started at: 8080")
+console.log("Started at: " + $PORT)
